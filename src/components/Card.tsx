@@ -1,4 +1,4 @@
-import { HTMLAttributes, ReactElement } from 'react'
+import React, { HTMLAttributes, ReactElement } from 'react'
 import { CardDetails } from '../types/cardDetails'
 import '../assets/css/Card.scss'
 
@@ -23,14 +23,16 @@ function Card({ cardDetails }: CardProps): ReactElement {
         {cardDetails.links &&
           <p className={'links'}>
             {Object.keys(cardDetails.links).map(link => (
-              <p className='link'>{'>'}<a href={cardDetails.links?.[link]}>{link}</a></p>
+              <p key={link} className='link'>
+                {'>'}<a href={cardDetails.links?.[link]}>{link}</a>
+              </p>
             ))}
           </p>
         }
       </div>
       <div>
         {cardDetails.image &&
-          <img src={`/images/${cardDetails.image}`} width='150' height='150' className='image'></img>
+          <img src={`/images/${cardDetails.image}`} width='150' height='150' className='image' alt={cardDetails.title}></img>
         }
       </div>
     </div>

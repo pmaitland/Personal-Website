@@ -1,4 +1,4 @@
-import { HTMLAttributes, ReactElement } from 'react'
+import React, { HTMLAttributes, ReactElement } from 'react'
 import Card from './Card'
 import '../assets/css/Cards.scss'
 import { CardDetails } from '../types/cardDetails'
@@ -17,7 +17,7 @@ function Cards({ title, cards }: CardsProps): ReactElement {
       </div>
       <div className='cards'>
         {cards.map(card => (
-          <Card cardDetails={card} />
+          <Card key={card.title} cardDetails={card} />
         ))}
       </div>
     </div>

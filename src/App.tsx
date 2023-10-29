@@ -1,4 +1,4 @@
-import { ReactElement } from 'react'
+import React, { ReactElement } from 'react'
 import Header from './components/Header'
 import Cards from './components/Cards'
 import NotFound from './components/NotFound'

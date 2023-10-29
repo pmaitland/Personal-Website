@@ -1,6 +1,6 @@
-import { ReactElement } from 'react'
+import React, { ReactElement } from 'react'
 import '../assets/css/Header.scss'
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom'
 
 function Header(): ReactElement {
   const { pathname } = useLocation()
