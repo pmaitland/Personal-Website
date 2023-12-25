@@ -41,9 +41,16 @@
 .link {
   display: flex;
   font-size: $body-font-size;
-  margin: 0;
+  margin-bottom: 0;
+
+  a {
+    text-decoration: underline;
+  }
 }
 
 .image {
+  width: 150px;
+  height: 150px;
   border: solid 1px $green;
+  align-self: center;
 }

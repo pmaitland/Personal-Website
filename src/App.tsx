@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import React, { useEffect, ReactElement } from 'react'
 import Header from './components/Header'
 import Cards from './components/Cards'
 import NotFound from './components/NotFound'
@@ -14,6 +14,10 @@ import { home } from './assets/constants/home'
 import Card from './components/Card'
 
 function App(): ReactElement {
+  useEffect(() => {
+    document.title = 'p@maitland'
+  }, [])
+
   return (
     <div className='app'>
       <BrowserRouter>

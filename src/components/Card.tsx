@@ -1,12 +1,15 @@
 import React, { HTMLAttributes, ReactElement } from 'react'
 import { CardDetails } from '../types/cardDetails'
 import '../assets/css/Card.scss'
+import useIsMobile from '../hooks/useIsMobile'
 
 interface CardProps extends HTMLAttributes<HTMLDivElement> {
   cardDetails: CardDetails
 }
 
 function Card({ cardDetails }: CardProps): ReactElement {
+  const isMobile = useIsMobile()
+
   return (
     <div className='card'>
       <div className='text'>
@@ -19,22 +22,23 @@ function Card({ cardDetails }: CardProps): ReactElement {
             }
           </p>
         }
+        {isMobile && cardDetails.image &&
+          <img src={`/images/${cardDetails.image}`} className='image' alt={cardDetails.title} />
+        }
         <p className={'body'}>{cardDetails.body}</p>
         {cardDetails.links &&
-          <p className={'links'}>
+          <div className={'links'}>
             {Object.keys(cardDetails.links).map(link => (
               <p key={link} className='link'>
                 {'>'}<a href={cardDetails.links?.[link]}>{link}</a>
               </p>
             ))}
-          </p>
+          </div>
         }
       </div>
-      <div>
-        {cardDetails.image &&
-          <img src={`/images/${cardDetails.image}`} width='150' height='150' className='image' alt={cardDetails.title}></img>
-        }
-      </div>
+      {!isMobile && cardDetails.image &&
+        <img src={`/images/${cardDetails.image}`} className='image' alt={cardDetails.title} />
+      }
     </div>
   )
 }
