@@ -9,9 +9,8 @@ import {
   Routes,
 } from 'react-router-dom'
 import { projects } from './assets/constants/projects'
-import { gameJamGames, games } from './assets/constants/games'
+import { gameJamGames, gameJamGamesFilters, games } from './assets/constants/games'
 import { home } from './assets/constants/home'
-import Card from './components/Card'
 
 function App(): ReactElement {
   return (
@@ -21,7 +20,7 @@ function App(): ReactElement {
         <div className='content'>
           <Routes>
             <Route path='/' element={
-              <Card cardDetails={home} />
+              <Cards title={'home'} cards={home} showCount={false} />
             } />
             <Route path='projects' element={
               <Cards title='projects' cards={projects} />
@@ -29,7 +28,7 @@ function App(): ReactElement {
             <Route path='games' element={
               <div>
                 <Cards title='games' cards={games} />
-                <Cards title='game jams' cards={gameJamGames} />
+                <Cards title='game jams' cards={gameJamGames} filters={gameJamGamesFilters} />
               </div>
             } />
             <Route path='*' element={<NotFound />} />

@@ -14,6 +14,10 @@ export const games: CardDetails[] = [
   }
 ]
 
+export const gameJamGamesFilters: string[] = [
+  'GitHub Game Off', 'Global Game Jam', 'GUDEV', 'Scrapyard Jam',
+]
+
 export const gameJamGames: CardDetails[] = [
   {
     title: 'Downhill Soapbox Champion',

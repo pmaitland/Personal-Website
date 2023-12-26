@@ -3,7 +3,6 @@
 .app {
   display: flex;
   flex-direction: column;
-  align-items: center;
   background-color: $black;
   min-height: 100vh;
   margin: 0;
@@ -14,8 +13,18 @@
 .content {
   display: flex;
   flex-grow: 1;
-  align-items: center;
   padding-bottom: 2rem;
+}
+
+select {
+  appearance: none;
+  height: fit-content;
+  background-color: $black;
+  color: $green;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  font-size: $body-font-size;
+  border: solid 1px $green;
 }
 
 .white {
