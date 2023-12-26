@@ -1,18 +1,24 @@
 import React, { ReactElement } from 'react'
 import '../assets/css/Header.scss'
 import { Link, useLocation } from 'react-router-dom'
+import useIsMobile from '../hooks/useIsMobile'
 
 function Header(): ReactElement {
   const { pathname } = useLocation()
+  const isMobile = useIsMobile()
 
   return (
     <div className='header'>
-      <div className='prompt'>
+      <div className='name'>
         <p>p@maitland</p>
-        <p className={'white'}>:</p>
-        <p className={'blue'}>{pathname === '/' ? '~' : pathname}</p>
-        <p className={'white'}>$</p>
-        <p className={'blink'}>|</p>
+        {!isMobile &&
+          <div className='prompt'>
+            <p className={'white'}>:</p>
+            <p className={'blue'}>{pathname === '/' ? '~' : pathname}</p>
+            <p className={'white'}>$</p>
+            <p className={'blink'}>|</p>
+          </div>
+        }
       </div>
       <div className='navbar'>
         <Link to="/">{'>home'}</Link>
