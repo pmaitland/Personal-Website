@@ -2,10 +2,19 @@ import React, { ReactElement } from 'react'
 import '../assets/css/Header.scss'
 import { Link, useLocation } from 'react-router-dom'
 import useIsMobile from '../hooks/useIsMobile'
+import classNames from 'classnames'
 
 function Header(): ReactElement {
   const { pathname } = useLocation()
   const isMobile = useIsMobile()
+
+  const tabs = [
+    '',
+    'games',
+    'game-jam-games',
+    'projects',
+    'others'
+  ]
 
   return (
     <div className='header'>
@@ -21,11 +30,17 @@ function Header(): ReactElement {
         }
       </div>
       <div className='navbar'>
-        <Link to="/">{'>home'}</Link>
-        <Link to="/games">{'>games'}</Link>
-        <Link to="/game-jam-games">{'>game-jam-games'}</Link>
-        <Link to="/projects">{'>projects'}</Link>
-        <Link to="/others">{'>others'}</Link>
+        {tabs.map(tab => (
+          <div key={tab} className='tab'>
+            <p>{'>'}</p>
+            <Link
+              to={`/${tab}`}
+              className={classNames('tab-name', {['mobile']: isMobile && pathname === `/${tab}`})}
+            >
+              {tab === '' ? 'home' : tab}
+            </Link>
+          </div>
+        ))}
       </div>
     </div>
   )

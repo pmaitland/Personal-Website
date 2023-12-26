@@ -17,7 +17,6 @@
 }
 
 select {
-  appearance: none;
   height: fit-content;
   background-color: $black;
   color: $green;
@@ -25,6 +24,7 @@ select {
     monospace;
   font-size: $body-font-size;
   border: solid 1px $green;
+  cursor: pointer;
 }
 
 .white {

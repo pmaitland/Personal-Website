@@ -21,19 +21,19 @@ function App(): ReactElement {
         <div className='content'>
           <Routes>
             <Route path='/' element={
-              <Cards cards={home} showCount={false} />
+              <Cards key={'home'} cards={home} showCount={false} />
             } />
             <Route path='projects' element={
-              <Cards cards={projects} />
+              <Cards key={'projects'} cards={projects} />
             } />
             <Route path='games' element={
-              <Cards cards={games} />
+              <Cards key={'games'} cards={games} />
             } />
             <Route path='game-jam-games' element={
-              <Cards cards={gameJamGames} filters={gameJamGamesFilters} />
+              <Cards key={'gameJamGames'} cards={gameJamGames} filters={gameJamGamesFilters} />
             } />
             <Route path='others' element={
-              <Cards cards={others} />
+              <Cards key={'others'} cards={others} />
             } />
             <Route path='*' element={<NotFound />} />
           </Routes>

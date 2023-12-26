@@ -2,6 +2,8 @@ import React, { HTMLAttributes, ReactElement, useState } from 'react'
 import Card from './Card'
 import '../assets/css/Cards.scss'
 import { CardDetails } from '../types/cardDetails'
+import useIsMobile from '../hooks/useIsMobile'
+import classNames from 'classnames'
 
 interface CardsProps extends HTMLAttributes<HTMLDivElement> {
   cards: CardDetails[],
@@ -10,40 +12,40 @@ interface CardsProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 function Cards({ cards, filters, showCount = true }: CardsProps): ReactElement {
-  const DEFAULT_FILTER = '-'
-  const [selectedFilter, setSelectedFilter] = useState<string>('-')
-  const cardCount = cards.filter(
-    card => selectedFilter === DEFAULT_FILTER ||
+  const isMobile = useIsMobile()
+  const defaultFilter = 'All'
+  const [selectedFilter, setSelectedFilter] = useState<string>(defaultFilter)
+  const filteredCards = cards.filter(
+    card => selectedFilter === defaultFilter ||
     (card.subtitles && card.subtitles.indexOf(selectedFilter) > -1)
-  ).length
+  )
 
   return (
     <div className='cards'>
-      <div className='header'>
+      <div className={classNames('header', {['mobile']: isMobile})}>
         {showCount &&
-          <p className='count'>{cardCount} item{cardCount === 1 ? '' : 's'}</p>
+          <p className='count'>
+            {filteredCards.length} item{filteredCards.length === 1 ? '' : 's'}
+          </p>
         }
         {filters &&
           <select onChange={selected => {
             setSelectedFilter(selected.target.selectedIndex > 0
               ? filters[selected.target.selectedIndex-1]
-              : DEFAULT_FILTER
+              : defaultFilter
             )
           }}>
-            <option value={'default'}>{DEFAULT_FILTER}</option>
+            <option value={'default'}>{defaultFilter}</option>
             {filters.map(filter =>
               <option key={filter} value={filter}>{filter}</option>
             )}
           </select>
         }
       </div>
-      <div className='content'>
-        {cards
-          .filter(card => selectedFilter === DEFAULT_FILTER || (card.subtitles && card.subtitles.indexOf(selectedFilter) > -1))
-          .map(card => (
-            <Card key={card.title} cardDetails={card} />
-          ))
-        }
+      <div className={classNames('content', {['mobile']: isMobile})}>
+        {filteredCards.map(card => (
+          <Card key={card.title} cardDetails={card} />
+        ))}
       </div>
     </div>
   )

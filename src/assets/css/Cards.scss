@@ -9,7 +9,18 @@
     gap: 1rem;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 0 1rem 0;
+
+    &.mobile {
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 0;
+      padding: 0;
+
+      select {
+        width: 100%;
+        margin-bottom: 1.5rem;
+      }
+    }
   }
   
   .count {
@@ -24,5 +35,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 2rem;
+
+    &.mobile {
+      gap: 1rem;
+    }
   }
 }

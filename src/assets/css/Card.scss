@@ -9,6 +9,13 @@
   border-left: solid 2px $green;
   padding: 0.5rem 0 0 1rem;
   gap: 2.5rem;
+  padding-bottom: 1rem;
+
+  &.mobile {
+    border-left: none;
+    border-bottom: solid 1px $green;
+    padding-left: 0;
+  }
 }
 
 .text {
@@ -18,10 +25,12 @@
 
 .title {
   margin: 0;
+  font-size: $title-font-size;
+  font-weight: bold;
 }
 
 .subtitles {
-  font-size: $body-font-size;
+  font-size: $subtitle-font-size;
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
@@ -35,12 +44,12 @@
 .links {
   display: flex;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 .link {
   display: flex;
-  font-size: $body-font-size;
+  font-size: $subtitle-font-size;
   margin-bottom: 0;
 
   a {
@@ -53,4 +62,10 @@
   height: 150px;
   border: solid 1px $green;
   align-self: center;
+
+  &.mobile {
+    width: 100%;
+    height: auto;
+    margin-top: 0.5rem;
+  }
 }
