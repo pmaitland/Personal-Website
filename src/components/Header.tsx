@@ -16,8 +16,10 @@ function Header(): ReactElement {
       </div>
       <div className='navbar'>
         <Link to="/">{'>home'}</Link>
-        <Link to="/projects">{'>projects'}</Link>
         <Link to="/games">{'>games'}</Link>
+        <Link to="/game-jam-games">{'>game-jam-games'}</Link>
+        <Link to="/projects">{'>projects'}</Link>
+        <Link to="/others">{'>others'}</Link>
       </div>
     </div>
   )

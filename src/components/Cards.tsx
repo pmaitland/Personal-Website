@@ -4,24 +4,22 @@ import '../assets/css/Cards.scss'
 import { CardDetails } from '../types/cardDetails'
 
 interface CardsProps extends HTMLAttributes<HTMLDivElement> {
-  title: string,
   cards: CardDetails[],
   filters?: string[],
   showCount?: boolean
 }
 
-function Cards({ title, cards, filters, showCount = true }: CardsProps): ReactElement {
+function Cards({ cards, filters, showCount = true }: CardsProps): ReactElement {
   const DEFAULT_FILTER = '-'
-  const [selectedFilter, setSelectedFilter] = useState<string>(DEFAULT_FILTER)
+  const [selectedFilter, setSelectedFilter] = useState<string>('-')
   const cardCount = cards.filter(
     card => selectedFilter === DEFAULT_FILTER ||
     (card.subtitles && card.subtitles.indexOf(selectedFilter) > -1)
   ).length
 
   return (
-    <div>
-      <div className='section-header'>
-        <p className='section-name'>{title}</p>
+    <div className='cards'>
+      <div className='header'>
         {showCount &&
           <p className='count'>{cardCount} item{cardCount === 1 ? '' : 's'}</p>
         }
@@ -39,7 +37,7 @@ function Cards({ title, cards, filters, showCount = true }: CardsProps): ReactEl
           </select>
         }
       </div>
-      <div className='cards'>
+      <div className='content'>
         {cards
           .filter(card => selectedFilter === DEFAULT_FILTER || (card.subtitles && card.subtitles.indexOf(selectedFilter) > -1))
           .map(card => (

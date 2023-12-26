@@ -11,6 +11,7 @@ import {
 import { projects } from './assets/constants/projects'
 import { gameJamGames, gameJamGamesFilters, games } from './assets/constants/games'
 import { home } from './assets/constants/home'
+import { others } from './assets/constants/others'
 
 function App(): ReactElement {
   return (
@@ -20,16 +21,19 @@ function App(): ReactElement {
         <div className='content'>
           <Routes>
             <Route path='/' element={
-              <Cards title={'home'} cards={home} showCount={false} />
+              <Cards cards={home} showCount={false} />
             } />
             <Route path='projects' element={
-              <Cards title='projects' cards={projects} />
+              <Cards cards={projects} />
             } />
             <Route path='games' element={
-              <div>
-                <Cards title='games' cards={games} />
-                <Cards title='game jams' cards={gameJamGames} filters={gameJamGamesFilters} />
-              </div>
+              <Cards cards={games} />
+            } />
+            <Route path='game-jam-games' element={
+              <Cards cards={gameJamGames} filters={gameJamGamesFilters} />
+            } />
+            <Route path='others' element={
+              <Cards cards={others} />
             } />
             <Route path='*' element={<NotFound />} />
           </Routes>

@@ -30,7 +30,7 @@ function Card({ cardDetails }: CardProps): ReactElement {
           <div className={'links'}>
             {Object.keys(cardDetails.links).map(link => (
               <p key={link} className='link'>
-                {'>'}<a href={cardDetails.links?.[link]}>{link}</a>
+                {'>'}<a href={cardDetails.links?.[link]} target='blank'>{link}</a>
               </p>
             ))}
           </div>
