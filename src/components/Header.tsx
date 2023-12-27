@@ -1,17 +1,22 @@
-import React, { ReactElement } from 'react'
+import React, { HTMLAttributes, ReactElement } from 'react'
 import '../assets/css/Header.scss'
 import { Link, useLocation } from 'react-router-dom'
 import useIsMobile from '../hooks/useIsMobile'
 import classNames from 'classnames'
 
-function Header(): ReactElement {
+interface HeaderProps extends HTMLAttributes<HTMLDivElement> {
+  selectedFilter?: string,
+  onTabChange: () => void
+}
+
+function Header({ selectedFilter, onTabChange }: HeaderProps): ReactElement {
   const { pathname } = useLocation()
   const isMobile = useIsMobile()
 
   const tabs = [
     '',
     'games',
-    'game-jam-games',
+    'game-jams',
     'projects',
     'others'
   ]
@@ -23,7 +28,10 @@ function Header(): ReactElement {
         {!isMobile &&
           <div className='prompt'>
             <p className={'white'}>:</p>
-            <p className={'blue'}>{pathname === '/' ? '~' : pathname}</p>
+            <p className={'blue'}>
+              {pathname === '/' ? '~' : pathname}
+              {selectedFilter && `/${selectedFilter.toLowerCase().replaceAll(' ', '-')}`}
+            </p>
             <p className={'white'}>$</p>
             <p className={'blink'}>|</p>
           </div>
@@ -35,7 +43,8 @@ function Header(): ReactElement {
             <p>{'>'}</p>
             <Link
               to={`/${tab}`}
-              className={classNames('tab-name', {['mobile']: isMobile && pathname === `/${tab}`})}
+              className={classNames('tab-name', { ['mobile']: isMobile && pathname === `/${tab}` })}
+              onClick={() => onTabChange()}
             >
               {tab === '' ? 'home' : tab}
             </Link>

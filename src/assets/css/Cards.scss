@@ -22,13 +22,13 @@
       }
     }
   }
-  
+
   .count {
-    align-self: center;
+    align-self: start;
     color: $green;
     font-size: $body-font-size;
   }
-  
+
   .content {
     display: flex;
     flex-direction: column;
