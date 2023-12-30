@@ -3,15 +3,8 @@ import Header from './components/Header'
 import Cards from './components/Cards'
 import NotFound from './components/NotFound'
 import './App.scss'
-import {
-  BrowserRouter,
-  Route,
-  Routes
-} from 'react-router-dom'
-import { projects } from './assets/constants/projects'
-import { gameJamGames, gameJamGamesFilters, games } from './assets/constants/games'
-import { home } from './assets/constants/home'
-import { others } from './assets/constants/others'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { gameJams, games, home, others, projects } from './assets/constants/constants'
 
 function App(): ReactElement {
   const [selectedFilter, setSelectedFilter] = useState<string | undefined>(undefined)
@@ -27,25 +20,24 @@ function App(): ReactElement {
         <div className='content'>
           <Routes>
             <Route path='/' element={
-              <Cards key={'home'} cards={home} showCount={false} />
+              <Cards key={'home'} cardList={home} showCount={false} />
             } />
             <Route path='projects' element={
-              <Cards key={'projects'} cards={projects} />
+              <Cards key={'projects'} cardList={projects} />
             } />
             <Route path='games' element={
-              <Cards key={'games'} cards={games} />
+              <Cards key={'games'} cardList={games} />
             } />
             <Route path='game-jams' element={
               <Cards
                 key={'gameJamGames'}
-                cards={gameJamGames}
-                filters={gameJamGamesFilters}
+                cardList={gameJams}
                 selectedFilter={selectedFilter}
                 onFilterChange={setSelectedFilter}
               />
             } />
             <Route path='others' element={
-              <Cards key={'others'} cards={others} />
+              <Cards key={'others'} cardList={others} />
             } />
             <Route path='*' element={<NotFound />} />
           </Routes>
