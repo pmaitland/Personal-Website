@@ -12,7 +12,7 @@ function Card({ cardDetails }: CardProps): ReactElement {
   const isMobile = useIsMobile()
 
   return (
-    <div className={classNames('card', {['mobile']: isMobile})}>
+    <div className={classNames('card', { ['mobile']: isMobile })}>
       <div className='text'>
         <p className={'title'}>{cardDetails.title}</p>
         {cardDetails.subtitles &&
@@ -24,14 +24,14 @@ function Card({ cardDetails }: CardProps): ReactElement {
           </p>
         }
         {isMobile && cardDetails.image &&
-          <img src={`/images/${cardDetails.image}`} className={classNames('image', {['mobile']: isMobile})} alt={cardDetails.title} />
+          <img src={`/images/${cardDetails.image}`} className={classNames('image', { ['mobile']: isMobile })} alt={cardDetails.title} />
         }
         <p className={'body'}>{cardDetails.body}</p>
         {cardDetails.links &&
           <div className={'links'}>
             {Object.keys(cardDetails.links).map(link => (
               <p key={link} className='link'>
-                {'>'}<a href={cardDetails.links?.[link]} target='blank'>{link}</a>
+                {'>'}<a href={cardDetails.links?.[link]} target='_blank' rel="noreferrer">{link}</a>
               </p>
             ))}
           </div>
