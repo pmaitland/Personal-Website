@@ -19,12 +19,16 @@
 select {
   height: fit-content;
   background-color: $black;
-  color: $green;
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
   font-size: $body-font-size;
-  border: solid 1px $green;
+  border: solid 1px;
+  border-color: inherit;
   cursor: pointer;
+}
+
+a {
+  color: inherit;
 }
 
 .white {

@@ -5,8 +5,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  color: $green;
-  border-left: solid 2px $green;
+  border-left: solid 2px;
+  border-color: inherit;
   padding: 0.5rem 0 0 1rem;
   gap: 2.5rem;
   padding-bottom: 1rem;
@@ -61,7 +61,8 @@
   width: 150px;
   min-width: 150px;
   height: 150px;
-  border: solid 1px $green;
+  border: solid 1px;
+  border-color: inherit;
   align-self: center;
 
   &.mobile {

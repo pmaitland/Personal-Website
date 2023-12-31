@@ -1,10 +1,9 @@
 import React, { ReactElement, useState } from 'react'
 import Header from './components/Header'
 import Cards from './components/Cards'
-import NotFound from './components/NotFound'
 import './App.scss'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { gameJams, games, home, others, projects } from './assets/constants/constants'
+import { gameJams, games, home, notFound, others, projects } from './assets/constants/constants'
 
 function App(): ReactElement {
   const [selectedFilter, setSelectedFilter] = useState<string | undefined>(undefined)
@@ -30,7 +29,7 @@ function App(): ReactElement {
             } />
             <Route path='game-jams' element={
               <Cards
-                key={'gameJamGames'}
+                key={'gameJams'}
                 cardList={gameJams}
                 selectedFilter={selectedFilter}
                 onFilterChange={setSelectedFilter}
@@ -39,7 +38,9 @@ function App(): ReactElement {
             <Route path='others' element={
               <Cards key={'others'} cardList={others} />
             } />
-            <Route path='*' element={<NotFound />} />
+            <Route path='*' element={
+              <Cards key={'notFound'} cardList={notFound} showCount={false} colour={'red'} />
+            } />
           </Routes>
         </div>
       </BrowserRouter>
