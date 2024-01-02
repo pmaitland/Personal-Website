@@ -3,8 +3,8 @@ import { CardList } from '../../types/cardList'
 export const home: CardList = {
   cards: [
     {
-      title: 'Ahoy hoy!',
-      body: 'Welcome to my website. Check out some of the things i\'ve done by having a look around or visiting one of the links below.',
+      title: 'Ahoy-hoy!',
+      body: 'Welcome to my website. Check out some of the things I\'ve done by having a look around or visiting one of the links below.',
       links: {
         'github': 'https://github.com/pmaitland',
         'linkedin': 'https://www.linkedin.com/in/pmaitland/'
@@ -31,7 +31,7 @@ export const games: CardList = {
 
 export const gameJams: CardList = {
   filters: [
-    'GitHub Game Off', 'Global Game Jam', 'GUDEV', 'Scrapyard Jam'
+    'GitHub Game Off', 'Global Game Jam', 'GUDEV'
   ],
   cards: [
     {

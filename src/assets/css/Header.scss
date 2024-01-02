@@ -2,15 +2,19 @@
 
 .header {
   display: flex;
-  min-width: 100%;
   flex-direction: column;
   align-items: flex-start;
   color: $green;
-  padding-bottom: 1rem;
+  padding: 0 $gutter-size 0 $gutter-size;
+
+  &.mobile {
+    padding: 0 $mobile-gutter-size 0 $mobile-gutter-size;
+  }
 }
 
 .name {
   display: flex;
+  font-size: $body-font-size;
 }
 
 .prompt {

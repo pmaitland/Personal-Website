@@ -3,24 +3,25 @@
 .app {
   display: flex;
   flex-direction: column;
-  background-color: $black;
   min-height: 100vh;
   margin: 0;
-  padding: 0 10% 0 10%;
-  font-size: $title-font-size;
+  font-family: FixedsysExcelsior;
 }
 
 .content {
   display: flex;
   flex-grow: 1;
-  padding-bottom: 2rem;
+  padding: 0 $gutter-size 1rem $gutter-size;
+
+  &.mobile {
+    padding: 0 $mobile-gutter-size 1rem $mobile-gutter-size;
+  }
 }
 
 select {
   height: fit-content;
   background-color: $black;
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: FixedsysExcelsior;
   font-size: $body-font-size;
   border: solid 1px;
   border-color: inherit;

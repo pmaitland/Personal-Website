@@ -4,8 +4,12 @@ import Cards from './components/Cards'
 import './App.scss'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { gameJams, games, home, notFound, others, projects } from './assets/constants/constants'
+import classNames from 'classnames'
+import useIsMobile from './hooks/useIsMobile'
+import Footer from './components/Footer'
 
 function App(): ReactElement {
+  const isMobile = useIsMobile()
   const [selectedFilter, setSelectedFilter] = useState<string | undefined>(undefined)
 
   const onTabChange = () => {
@@ -13,10 +17,10 @@ function App(): ReactElement {
   }
 
   return (
-    <div className='app'>
+    <div className={'app'}>
       <BrowserRouter>
         <Header selectedFilter={selectedFilter} onTabChange={onTabChange} />
-        <div className='content'>
+        <div className={classNames('content', { ['mobile']: isMobile })}>
           <Routes>
             <Route path='/' element={
               <Cards key={'home'} cardList={home} showCount={false} />
@@ -43,6 +47,7 @@ function App(): ReactElement {
             } />
           </Routes>
         </div>
+        <Footer />
       </BrowserRouter>
     </div>
   )

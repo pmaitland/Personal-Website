@@ -1,7 +1,12 @@
+@import './assets/css/variables';
+
 body {
   margin: 0;
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  background-color: $black;
+  @font-face {
+    font-family: 'FixedsysExcelsior';
+    src: url('./assets/fonts/Fixedsys Excelsior/Fixedsys Excelsior 3.01 Regular.ttf') format('truetype');
+  }
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

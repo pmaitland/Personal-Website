@@ -22,7 +22,7 @@ function Header({ selectedFilter, onTabChange }: HeaderProps): ReactElement {
   ]
 
   return (
-    <div className='header'>
+    <div className={classNames('header', { ['mobile']: isMobile })}>
       <div className='name'>
         <p>p@maitland</p>
         {!isMobile &&

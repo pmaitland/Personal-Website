@@ -3,22 +3,21 @@
 .cards {
   width: 100%;
 
-  .header {
+  .options {
     display: flex;
     flex-direction: row;
     gap: 1rem;
     align-items: center;
     justify-content: space-between;
+    padding: 1.5rem 0 1.5rem 0;
 
     &.mobile {
       flex-direction: column;
       justify-content: flex-end;
-      gap: 0;
-      padding: 0;
+      padding: 1rem 0 1rem 0;
 
       select {
         width: 100%;
-        margin-bottom: 1.5rem;
       }
     }
   }
@@ -26,9 +25,10 @@
   .count {
     align-self: start;
     font-size: $body-font-size;
+    margin: 0;
   }
 
-  .content {
+  .list {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -37,6 +37,10 @@
 
     &.mobile {
       gap: 1rem;
+
+      :last-child {
+        border: none;
+      }
     }
   }
 }

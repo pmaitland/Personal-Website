@@ -14,15 +14,17 @@ function Card({ cardDetails }: CardProps): ReactElement {
   return (
     <div className={classNames('card', { ['mobile']: isMobile })}>
       <div className='text'>
-        <p className={'title'}>{cardDetails.title}</p>
-        {cardDetails.subtitles &&
+        <div className='titles'>
+          <p className={'title'}>{cardDetails.title}</p>
+          {cardDetails.subtitles &&
           <p className={'subtitles'}>
             {cardDetails.subtitles.map((subtitle, i) => (
               i > 0 ? ` / ${subtitle}` : subtitle
             ))
             }
           </p>
-        }
+          }
+        </div>
         {isMobile && cardDetails.image &&
           <img src={`/images/${cardDetails.image}`} className={classNames('image', { ['mobile']: isMobile })} alt={cardDetails.title} />
         }
