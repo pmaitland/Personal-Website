@@ -23,13 +23,18 @@ function App(): ReactElement {
         <div className={classNames('content', { ['mobile']: isMobile })}>
           <Routes>
             <Route path='/' element={
-              <Cards key={'home'} cardList={home} showCount={false} />
-            } />
-            <Route path='projects' element={
-              <Cards key={'projects'} cardList={projects} />
+              <Cards
+                key={'home'}
+                cardList={home}
+                showCount={false}
+                showDropdowns={false}
+              />
             } />
             <Route path='games' element={
-              <Cards key={'games'} cardList={games} />
+              <Cards
+                key={'games'}
+                cardList={games}
+              />
             } />
             <Route path='game-jams' element={
               <Cards
@@ -39,11 +44,27 @@ function App(): ReactElement {
                 onFilterChange={setSelectedFilter}
               />
             } />
+            <Route path='projects' element={
+              <Cards
+                key={'projects'}
+                cardList={projects}
+              />
+            } />
             <Route path='others' element={
-              <Cards key={'others'} cardList={others} />
+              <Cards
+                key={'others'}
+                cardList={others}
+                showDropdowns={false}
+              />
             } />
             <Route path='*' element={
-              <Cards key={'notFound'} cardList={notFound} showCount={false} colour={'red'} />
+              <Cards
+                key={'notFound'}
+                cardList={notFound}
+                showCount={false}
+                showDropdowns={false}
+                colour={'red'}
+              />
             } />
           </Routes>
         </div>
