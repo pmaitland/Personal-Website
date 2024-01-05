@@ -14,6 +14,7 @@ export const home: CardList = {
 }
 
 export const games: CardList = {
+  description: 'Making video games is great and I would like to create more, but very few of those that I start working on ever reach an enjoyably playable state! Here are the ones that somehow did.',
   cards: [
     {
       title: 'Push Puzzle',
@@ -30,6 +31,7 @@ export const games: CardList = {
 }
 
 export const gameJams: CardList = {
+  description: 'I really enjoy taking part in game jams and am pleased to say I\'ve been able to attend many. These are all of the games I\'ve been a part of making at them. Try some of them out!',
   filters: [
     'GitHub Game Off', 'Global Game Jam', 'GUDEV'
   ],
@@ -165,6 +167,7 @@ export const gameJams: CardList = {
 }
 
 export const projects: CardList = {
+  description: 'These are other non-game related things I\'ve done. I\'ve worked on more, so this list is not exhaustive, but not everything is worth showing off :)',
   cards: [
     {
       title: 'Personal Website',
@@ -213,6 +216,7 @@ export const projects: CardList = {
 }
 
 export const others: CardList = {
+  description: 'Check out these other people and what they\'re up to too!',
   cards: [
     {
       title: 'Duck Sauce Games',
@@ -221,6 +225,15 @@ export const others: CardList = {
         'website': 'https://ducksauce.games',
       },
       image: 'dsg.png'
+    },
+    {
+      title: 'handyheart',
+      body: 'A fantastic artist, great developer, and wonderful person.',
+      links: {
+        'website': 'https://handyheart.art',
+        'github': 'https://github.com/yasmojam'
+      },
+      image: 'handyheart.png'
     }
   ]
 }

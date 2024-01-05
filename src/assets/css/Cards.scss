@@ -3,6 +3,12 @@
 .cards {
   width: 100%;
 
+  .description {
+    margin-bottom: 0;
+    font-size: $body-font-size;
+    text-align: justify;
+  }
+
   .options {
     display: flex;
     flex-direction: row;
@@ -26,7 +32,7 @@
       gap: 1rem;
 
       &.mobile {
-        flex-direction: column;
+        flex-direction: column-reverse;
         width: 100%;
       }
     }
@@ -34,7 +40,7 @@
 
   .count {
     align-self: start;
-    font-size: $body-font-size;
+    font-size: $subtitle-font-size;
     margin: 0;
   }
 

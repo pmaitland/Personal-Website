@@ -52,18 +52,15 @@
   display: flex;
   font-size: $subtitle-font-size;
   margin: 0;
-
-  a {
-    text-decoration: underline;
-  }
 }
 
 .image {
+  min-width: 150px;
+  min-height: 150px;
   width: 150px;
   height: 150px;
   border: solid 1px;
   border-color: inherit;
-  align-self: flex-end;
 
   &.mobile {
     align-self: center;

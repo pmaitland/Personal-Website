@@ -29,7 +29,8 @@ select {
 }
 
 a {
-  color: inherit;
+  text-decoration: underline;
+  color: $green;
 }
 
 .white {

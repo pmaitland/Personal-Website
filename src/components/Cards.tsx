@@ -33,6 +33,8 @@ function Cards({
 
   const [isReverse, setIsReverse] = useState<boolean>(false)
 
+  const isDropdownsShown = showDropdowns && (cardList.filters || cardList.cards.length > 1)
+
   const handleSortChange = (selected: React.ChangeEvent<HTMLSelectElement>) => {
     setIsReverse(selected.target.selectedOptions[0].value === 'oldest')
   }
@@ -46,13 +48,16 @@ function Cards({
 
   return (
     <div className={classNames('cards', colour)}>
+      {cardList.description &&
+        <p className={'description'}>{cardList.description}</p>
+      }
       <div className={classNames('options', { ['mobile']: isMobile })}>
         {showCount &&
           <p className={classNames('count', colour)}>
             {filteredCards.length} item{filteredCards.length === 1 ? '' : 's'}
           </p>
         }
-        {showDropdowns &&
+        {isDropdownsShown &&
           <div className={classNames('dropdowns', { ['mobile']: isMobile })}>
             {cardList.filters &&
               <select
