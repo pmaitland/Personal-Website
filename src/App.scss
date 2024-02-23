@@ -5,7 +5,7 @@
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  font-family: FixedsysExcelsior;
+  font-family: monospace, monospace;
 }
 
 .content {
@@ -21,11 +21,15 @@
 select {
   height: fit-content;
   background-color: $black;
-  font-family: FixedsysExcelsior;
+  font-family: monospace, monospace;
   font-size: $body-font-size;
   border: solid 1px;
   border-color: inherit;
   cursor: pointer;
+}
+
+option {
+  font-family: monospace, monospace;
 }
 
 a {

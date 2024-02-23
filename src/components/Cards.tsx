@@ -41,9 +41,9 @@ function Cards({
 
   const handleFilterChange = (selected: React.ChangeEvent<HTMLSelectElement>) => {
     if (!onFilterChange || !cardList.filters) return
-    selected.target.selectedIndex-1 === cardList.filters?.length
+    selected.target.selectedIndex - 1 === cardList.filters?.length
       ? onFilterChange(other)
-      : onFilterChange(cardList.filters[selected.target.selectedIndex-1])
+      : onFilterChange(cardList.filters[selected.target.selectedIndex - 1])
   }
 
   return (
@@ -102,7 +102,7 @@ function Cards({
           </div>
         ))}
       </div>
-    </div>
+    </div >
   )
 }
 
