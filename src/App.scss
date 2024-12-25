@@ -1,11 +1,10 @@
-@import './assets/css/variables';
+@use './assets/css/variables' as *;
 
 .app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  font-family: monospace, monospace;
 }
 
 .content {
@@ -21,7 +20,7 @@
 select {
   height: fit-content;
   background-color: $black;
-  font-family: monospace, monospace;
+  font-family: 'Fixedsys Excelsior';
   font-size: $body-font-size;
   border: solid 1px;
   border-color: inherit;
@@ -29,7 +28,7 @@ select {
 }
 
 option {
-  font-family: monospace, monospace;
+  font-family: 'Fixedsys Excelsior';
 }
 
 a {

@@ -1,12 +1,12 @@
-@import './assets/css/variables';
+@use './assets/css/variables' as *;
+
+@font-face {
+  font-family: 'Fixedsys Excelsior';
+  src: url('./assets/fonts/Fixedsys Excelsior/Fixedsys Excelsior 3.01 Regular.ttf') format('truetype');
+}
 
 body {
   margin: 0;
   background-color: $black;
-  @font-face {
-    font-family: 'FixedsysExcelsior';
-    src: url('./assets/fonts/Fixedsys Excelsior/Fixedsys Excelsior 3.01 Regular.ttf') format('truetype');
-  }
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Fixedsys Excelsior';
 }
