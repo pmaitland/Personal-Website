@@ -29,11 +29,11 @@ function Header({ selectedFilter, onTabChange }: HeaderProps): ReactElement {
           <div className='prompt'>
             <p className={'white'}>:</p>
             <p className={'blue'}>
-              {pathname === '/' ? '~' : pathname}
+              {pathname === '/' ? '~' : '~' + pathname}
               {selectedFilter && `/${selectedFilter.toLowerCase().replaceAll(' ', '-')}`}
             </p>
             <p className={'white'}>$</p>
-            <p className={'blink'}>|</p>
+            <p className={'blink'}>&nbsp;█</p>
           </div>
         }
       </div>
