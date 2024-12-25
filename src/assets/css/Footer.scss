@@ -5,10 +5,10 @@
   flex-direction: column;
   align-items: flex-start;
   color: $green;
-  padding: 0.5rem $gutter-size 0.5rem $gutter-size;
+  padding: 0.5rem 0 0.5rem 0;
 
   &.mobile {
-    padding: 0 $mobile-gutter-size 0.5rem $mobile-gutter-size;
+    padding-bottom: 0.5rem;
   }
 }
 
