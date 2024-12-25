@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import { ReactElement } from 'react'
 import '../assets/css/Footer.scss'
 import useIsMobile from '../hooks/useIsMobile'
 import classNames from 'classnames'

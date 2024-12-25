@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, ReactElement } from 'react'
+import { HTMLAttributes, ReactElement } from 'react'
 import { CardDetails } from '../types/cardDetails'
 import '../assets/css/Card.scss'
 import useIsMobile from '../hooks/useIsMobile'

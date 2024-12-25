@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, ReactElement } from 'react'
+import { HTMLAttributes, ReactElement } from 'react'
 import '../assets/css/Header.scss'
 import { Link, useLocation } from 'react-router-dom'
 import useIsMobile from '../hooks/useIsMobile'
