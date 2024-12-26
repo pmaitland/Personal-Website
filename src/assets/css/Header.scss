@@ -12,18 +12,16 @@
   font-size: $body-font-size;
 }
 
-.prompt {
+.cli {
   display: flex;
 }
 
-.blink {
-  animation: blink 1s step-start infinite;
+.prompt-form {
+  display: flex;
 }
 
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
+.prompt {
+  width: 290px;
 }
 
 .navbar {

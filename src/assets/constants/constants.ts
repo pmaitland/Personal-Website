@@ -246,3 +246,15 @@ export const notFound: CardList = {
     }
   ]
 }
+
+export const emojis: Record<string, string>[] = [
+    { 'alien': '👽' },
+    { 'cat': '🐱' },
+    { 'demon': '😈' },
+    { 'egg': '🥚' },
+    { 'fish': '🐟' },
+    { 'pirate': '🏴‍☠️' },
+    { 'pizza': '🍕' },
+    { 'skull': '💀' },
+    { 'star': '⭐' },
+]

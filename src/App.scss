@@ -32,6 +32,14 @@ option {
   font-family: 'Fixedsys Excelsior';
 }
 
+input {
+  font-family: 'Fixedsys Excelsior';
+  background-color: $black;
+  border: none;
+  outline: none;
+  font-size: $body-font-size;
+}
+
 a {
   text-decoration: underline;
   color: $green;
