@@ -25,11 +25,9 @@ function Header({ selectedFilter, onTabChange }: HeaderProps): ReactElement {
   ]
 
   const onPromptSubmit = (e: FormEvent<HTMLFormElement>) => {
-    emojis.forEach(emoji => {
-      if (emoji[prompt]) {
-        setDecorator(emoji[prompt])
-      }
-    })
+    if (emojis[prompt]) {
+      setDecorator(emojis[prompt])
+    }
     setPrompt('')
     e.preventDefault()
   }
