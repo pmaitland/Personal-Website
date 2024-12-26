@@ -2,7 +2,7 @@ import { ReactElement, useState } from 'react'
 import Header from './components/Header'
 import Cards from './components/Cards'
 import './App.scss'
-import { HashRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { gameJams, games, home, notFound, others, projects } from './assets/constants/constants'
 import classNames from 'classnames'
 import useIsMobile from './hooks/useIsMobile'
@@ -18,7 +18,7 @@ function App(): ReactElement {
 
   return (
     <div className={'app'}>
-      <HashRouter>
+      <BrowserRouter basename='/'>
         <Header selectedFilter={selectedFilter} onTabChange={onTabChange} />
         <div className={classNames('content', { ['mobile']: isMobile })}>
           <Routes>
@@ -69,7 +69,7 @@ function App(): ReactElement {
           </Routes>
         </div>
         <Footer />
-      </HashRouter>
+      </BrowserRouter>
     </div>
   )
 }
