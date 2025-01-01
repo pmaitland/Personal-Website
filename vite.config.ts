@@ -6,6 +6,9 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: './build',
-    emptyOutDir: true
+    emptyOutDir: true,
+    rollupOptions: {
+      input: ['src/main.tsx', './index.html', './404.html']
+    }
   }
 })
