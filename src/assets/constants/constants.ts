@@ -172,7 +172,7 @@ export const projects: CardList = {
     {
       title: 'Personal Website',
       subtitles: [
-        'Oct 2023 - Dec 2023', 'React'
+        'Oct 2023 - Present', 'React'
       ],
       body: 'You are here. I wanted somewhere to collate the things I\'d made and worked on, so this is it!',
       image: 'website.png',
