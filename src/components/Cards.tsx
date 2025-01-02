@@ -40,10 +40,14 @@ function Cards({
   }
 
   const handleFilterChange = (selected: React.ChangeEvent<HTMLSelectElement>) => {
-    if (!onFilterChange || !cardList.filters) return
-    selected.target.selectedIndex - 1 === cardList.filters?.length
-      ? onFilterChange(other)
-      : onFilterChange(cardList.filters[selected.target.selectedIndex - 1])
+    if (!onFilterChange || !cardList.filters) {
+      return
+    }
+    if (selected.target.selectedIndex - 1 === cardList.filters?.length) {
+      onFilterChange(other)
+    } else {
+      onFilterChange(cardList.filters[selected.target.selectedIndex - 1])
+    }
   }
 
   return (
