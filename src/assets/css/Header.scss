@@ -7,9 +7,13 @@
   color: $green;
 }
 
-.name {
+.terminal {
   display: flex;
   font-size: $body-font-size;
+}
+
+.user {
+  max-height: 1.25rem;
 }
 
 .cli {

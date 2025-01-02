@@ -38,8 +38,8 @@ function Header({ selectedFilter, onTabChange }: HeaderProps): ReactElement {
 
   return (
     <div className={classNames('header', { ['mobile']: isMobile })}>
-      <div className='name'>
-        <p>p{decorator}maitland</p>
+      <div className='terminal'>
+        <p className={'user'}>p{decorator}maitland</p>
         {!isMobile &&
           <div className='cli'>
             <p className={'white'}>:</p>
