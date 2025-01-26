@@ -37,6 +37,18 @@ export const gameJams: CardList = {
   ],
   cards: [
     {
+        title: 'Rubber Duck Bubble Party',
+        body: 'Join the rubber ducks in their exciting bubble party! Split into teams and push the bubbles around in multiple fun gamemodes!',
+        subtitles: [
+          'Global Game Jam', 'Jan 2025', 'Bubble', 'Godot'
+        ],
+        links: {
+          'github': 'https://github.com/pmaitland/GGJ2025',
+          'ggj': 'https://globalgamejam.org/games/2025/project-bubball-6'
+        },
+        image: 'rubberDuckBubbleParty.png'
+    },
+    {
       title: 'Downhill Soapbox Champion',
       body: 'Speed down the soapbox champion hill picking up cogs and avoiding obstacles.',
       subtitles: [
