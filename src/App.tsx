@@ -7,6 +7,7 @@ import { gameJams, games, home, notFound, others, projects } from './assets/cons
 import classNames from 'classnames'
 import useIsMobile from './hooks/useIsMobile'
 import Footer from './components/Footer'
+import DigitalRain from './components/DigitalRain'
 
 function App(): ReactElement {
   const isMobile = useIsMobile()
@@ -17,59 +18,66 @@ function App(): ReactElement {
   }
 
   return (
-    <div className={'app'}>
-      <BrowserRouter basename='/'>
-        <Header selectedFilter={selectedFilter} onTabChange={onTabChange} />
-        <div className={classNames('content', { ['mobile']: isMobile })}>
-          <Routes>
-            <Route path='/' element={
-              <Cards
-                key={'home'}
-                cardList={home}
-                showCount={false}
-                showDropdowns={false}
-              />
-            } />
-            <Route path='games' element={
-              <Cards
-                key={'games'}
-                cardList={games}
-              />
-            } />
-            <Route path='game-jams' element={
-              <Cards
-                key={'gameJams'}
-                cardList={gameJams}
-                selectedFilter={selectedFilter}
-                onFilterChange={setSelectedFilter}
-              />
-            } />
-            <Route path='projects' element={
-              <Cards
-                key={'projects'}
-                cardList={projects}
-              />
-            } />
-            <Route path='others' element={
-              <Cards
-                key={'others'}
-                cardList={others}
-                showDropdowns={false}
-              />
-            } />
-            <Route path='*' element={
-              <Cards
-                key={'notFound'}
-                cardList={notFound}
-                showCount={false}
-                showDropdowns={false}
-                colour={'red'}
-              />
-            } />
-          </Routes>
-        </div>
-        <Footer />
-      </BrowserRouter>
+    <div>
+      <div className={'background'}>
+        {!isMobile &&
+          <DigitalRain />
+        }
+      </div>
+      <div className={'foreground'}>
+        <BrowserRouter basename='/'>
+          <Header selectedFilter={selectedFilter} onTabChange={onTabChange} />
+          <div className={classNames('content', { ['mobile']: isMobile })}>
+            <Routes>
+              <Route path='/' element={
+                <Cards
+                  key={'home'}
+                  cardList={home}
+                  showCount={false}
+                  showDropdowns={false}
+                />
+              } />
+              <Route path='games' element={
+                <Cards
+                  key={'games'}
+                  cardList={games}
+                />
+              } />
+              <Route path='game-jams' element={
+                <Cards
+                  key={'gameJams'}
+                  cardList={gameJams}
+                  selectedFilter={selectedFilter}
+                  onFilterChange={setSelectedFilter}
+                />
+              } />
+              <Route path='projects' element={
+                <Cards
+                  key={'projects'}
+                  cardList={projects}
+                />
+              } />
+              <Route path='others' element={
+                <Cards
+                  key={'others'}
+                  cardList={others}
+                  showDropdowns={false}
+                />
+              } />
+              <Route path='*' element={
+                <Cards
+                  key={'notFound'}
+                  cardList={notFound}
+                  showCount={false}
+                  showDropdowns={false}
+                  colour={'red'}
+                />
+              } />
+            </Routes>
+          </div>
+          <Footer />
+        </BrowserRouter>
+      </div>
     </div>
   )
 }
