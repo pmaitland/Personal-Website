@@ -44,6 +44,7 @@ export const gameJams: CardList = {
         ],
         links: {
           'github': 'https://github.com/pmaitland/GGJ2025',
+          'itch.io': 'https://spooonlegs.itch.io/rubber-duck-bubble-party',
           'ggj': 'https://globalgamejam.org/games/2025/project-bubball-6'
         },
         image: 'rubberDuckBubbleParty.png'
@@ -79,7 +80,8 @@ export const gameJams: CardList = {
       ],
       links: {
         'github': 'https://github.com/Yasmojam/ggj2022',
-        'play it': 'https://yasmojam.github.io/ggj2022/'
+        'play it': 'https://yasmojam.github.io/ggj2022/',
+        'ggj': 'https://v3.globalgamejam.org/2022/games/god-complex-5'
       },
       image: 'godComplex.png'
     },
@@ -102,7 +104,8 @@ export const gameJams: CardList = {
       ],
       links: {
         'github': 'https://github.com/Yasmojam/GGJ21',
-        'itch.io': 'https://dasha1362.itch.io/island-dream'
+        'itch.io': 'https://dasha1362.itch.io/island-dream',
+        'ggj': 'https://v3.globalgamejam.org/2021/games/tbc-3'
       },
       image: 'islandDream.png'
     },
@@ -136,7 +139,8 @@ export const gameJams: CardList = {
         'Global Game Jam', 'Jan 2019', 'What home means to you', 'Unity'
       ],
       links: {
-        'github': 'https://github.com/Iain530/GGJ19'
+        'github': 'https://github.com/Iain530/GGJ19',
+        'ggj': 'https://v3.globalgamejam.org/2019/games/hermit-2'
       },
       image: 'hermit.png'
     },
@@ -171,7 +175,8 @@ export const gameJams: CardList = {
       ],
       links: {
         'github': 'https://github.com/DevdudeSami/GUEmail_GGJ',
-        'itch.io': 'https://dasha1362.itch.io/operation-wire'
+        'itch.io': 'https://dasha1362.itch.io/operation-wire',
+        'ggj': 'https://v3.globalgamejam.org/2018/games/operation-wire'
       },
       image: 'operationWire.png'
     }
@@ -195,9 +200,12 @@ export const projects: CardList = {
     {
       title: 'Sonic',
       subtitles: [
-        'Aug 2023 - Sep 2023', 'Python'
+        'Aug 2023 - Present', 'Python'
       ],
-      body: 'Discord bot used with friends to keep track of running records, stats, and goals.',
+      body: 'Discord bot used with friends to announce Parkrun finishes and review stats and progress.',
+      links: {
+        'parkrun': 'https://www.parkrun.org.uk/'
+      },
       image: 'sonic.png'
     },
     {
