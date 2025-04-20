@@ -128,7 +128,8 @@ export const gameJams: CardList = {
       ],
       links: {
         'github': 'https://github.com/pmaitland/GUDev5',
-        'itch.io': 'https://gudev.itch.io/slimes'
+        'itch.io': 'https://gudev.itch.io/slimes',
+        'gudev': 'https://gudevsoc.co.uk/gamejam/february2019/'
       },
       image: 'slimes.png'
     },
@@ -152,7 +153,8 @@ export const gameJams: CardList = {
       ],
       links: {
         'github': 'https://github.com/dasha1362/gudev4-deceit',
-        'itch.io': 'https://dasha1362.itch.io/parkour-piggies'
+        'itch.io': 'https://dasha1362.itch.io/parkour-piggies',
+        'gudev': 'https://gudevsoc.co.uk/gamejam/october2018/'
       },
       image: 'parkourPiggies.png'
     },
@@ -163,7 +165,9 @@ export const gameJams: CardList = {
         'GUDEV', 'Mar 2018', 'Salvage', 'Godot'
       ],
       links: {
-        'github': 'https://github.com/pmaitland/GUDEV_GameJam_Email-'
+        'github': 'https://github.com/pmaitland/GUDEV_GameJam_Email-',
+        'itch.io': 'https://gudev.itch.io/claw-game',
+        'gudev': 'https://gudevsoc.co.uk/gamejam/march2018/'
       },
       image: 'clawGame.png'
     },
