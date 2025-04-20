@@ -15,6 +15,11 @@
   max-width: 70rem;
   margin: 0;
   background-color: rgba($black, 0.9);
+  padding: 0 1rem 0 1rem;
+  
+  &.mobile {
+    padding: 0;
+  }
 }
 
 .content {

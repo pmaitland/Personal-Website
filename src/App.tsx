@@ -24,7 +24,7 @@ function App(): ReactElement {
           <DigitalRain />
         }
       </div>
-      <div className={'foreground'}>
+      <div className={classNames('foreground', { ['mobile']: isMobile })}>
         <BrowserRouter basename='/'>
           <Header selectedFilter={selectedFilter} onTabChange={onTabChange} />
           <div className={classNames('content', { ['mobile']: isMobile })}>
