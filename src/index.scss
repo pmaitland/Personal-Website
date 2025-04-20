@@ -1,8 +1,8 @@
 @use './assets/css/variables' as *;
 
 @font-face {
-  font-family: 'Fixedsys Excelsior';
-  src: url('./assets/fonts/Fixedsys Excelsior/Fixedsys Excelsior 3.01 Regular.ttf') format('truetype');
+  font-family: 'Good Old DOS';
+  src: url('./assets/fonts/good_old_dos/Good Old DOS.ttf') format('truetype');
 }
 
 body {
@@ -10,5 +10,5 @@ body {
   justify-content: center;
   margin: 0 1rem 0 1rem;
   background-color: $black;
-  font-family: 'Fixedsys Excelsior';
+  font-family: 'Good Old DOS';
 }

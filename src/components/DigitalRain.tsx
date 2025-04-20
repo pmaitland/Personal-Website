@@ -25,7 +25,7 @@ function DigitalRain(): ReactElement {
           context.fillStyle = "rgba(15, 15, 15, 1)"
           context.fillRect(0, 0, window.innerWidth, window.innerHeight)
           context.fillStyle = "rgba(11, 248, 114, 1)"
-          context.font = `${charSize}px 'Jersey_10', monospace`
+          context.font = `${charSize}px 'Good Old DOS', monospace`
           const newDropletYs = [...dropletYs]
           const newDropletChars = [...dropletChars]
           for (let droplet = 0; droplet < dropletYs.length; droplet++) {
