@@ -9,9 +9,9 @@ function DigitalRain(): ReactElement {
   const kana = 'ｦｧｨｩｪｫｬｭｮｯｰｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝ'
   const chars = letters + numbers + kana
   const charSize = 24
-  const columnCount = Math.floor(window.innerWidth / charSize) + 1
   const dropletLength = 15
   const dropletOpaqueLength = dropletLength / 3
+  const [columnCount, setColumnCount] = useState<number>(Math.floor(window.innerWidth / charSize) + 1)
   const [dropletYs, setDropletYs] = useState<number[]>(Array.from({ length: columnCount }, () => Math.floor(Math.random() * (window.innerHeight + dropletLength * charSize))))
   const [dropletChars, setDropletChars] = useState<string[][]>(Array.from({ length: columnCount }, () => Array.from({ length: dropletLength }, () => chars[Math.floor(Math.random() * chars.length)])))
 
@@ -22,10 +22,23 @@ function DigitalRain(): ReactElement {
         if (context) {
           context.canvas.width = window.innerWidth
           context.canvas.height = window.innerHeight
+
+          const currentColumnCount = Math.floor(window.innerWidth / charSize) + 1
+          if (columnCount < currentColumnCount) {
+            let index = columnCount;
+            while (index < currentColumnCount) {
+              dropletYs[index] = Math.floor(Math.random() * (window.innerHeight + dropletLength * charSize))
+              dropletChars[index] = Array.from({ length: dropletLength }, () => chars[Math.floor(Math.random() * chars.length)])
+              index++;
+            }
+            setColumnCount(Math.floor(window.innerWidth / charSize) + 1)
+          }
+
           context.fillStyle = "rgba(15, 15, 15, 1)"
           context.fillRect(0, 0, window.innerWidth, window.innerHeight)
           context.fillStyle = "rgba(11, 248, 114, 1)"
           context.font = `${charSize}px 'Good Old DOS', monospace`
+
           const newDropletYs = [...dropletYs]
           const newDropletChars = [...dropletChars]
           for (let droplet = 0; droplet < dropletYs.length; droplet++) {
@@ -62,7 +75,7 @@ function DigitalRain(): ReactElement {
     }, 80)
 
     return () => clearInterval(interval)
-  }, [chars, dropletYs, dropletChars, dropletOpaqueLength])
+  }, [chars, columnCount, dropletYs, dropletChars, dropletOpaqueLength])
 
   return <canvas className={'canvas'} ref={ref} />
 }
