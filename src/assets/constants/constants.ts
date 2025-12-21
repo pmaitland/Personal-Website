@@ -267,7 +267,8 @@ export const notFound: CardList = {
   cards: [
     {
       title: '404 Not Found',
-      body: 'Sorry, it looks like that doesn\'t exist.'
+      body: 'Sorry, it looks like that doesn\'t exist. Use the navbar above to get back to somewhere that does.',
+      image: '404.png'
     }
   ]
 }
