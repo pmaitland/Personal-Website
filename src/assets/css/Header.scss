@@ -10,6 +10,11 @@
 .terminal {
   display: flex;
   font-size: $body-font-size;
+  margin: 16px 0 16px 0;
+
+  p {
+    margin: 0;
+  }
 }
 
 .user {
@@ -47,6 +52,7 @@
 
   p {
     margin: 0;
+    font-size: $body-font-size;
   }
 }
 

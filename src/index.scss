@@ -1,8 +1,8 @@
 @use './assets/css/variables' as *;
 
 @font-face {
-  font-family: 'Good Old DOS';
-  src: url('./assets/fonts/good_old_dos/Good Old DOS.ttf') format('truetype');
+  font-family: 'monogram';
+  src: url('./assets/fonts/monogram/monogram.ttf') format('truetype');
 }
 
 body {
@@ -10,5 +10,5 @@ body {
   justify-content: center;
   margin: 0 1rem 0 1rem;
   background-color: $black;
-  font-family: 'Good Old DOS';
+  font-family: 'monogram';
 }

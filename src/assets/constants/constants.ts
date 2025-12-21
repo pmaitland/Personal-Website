@@ -8,7 +8,8 @@ export const home: CardList = {
       links: {
         'github': 'https://github.com/pmaitland',
         'linkedin': 'https://www.linkedin.com/in/pmaitland/'
-      }
+      },
+      image: 'website.png'
     }
   ]
 }

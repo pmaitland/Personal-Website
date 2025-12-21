@@ -7,7 +7,6 @@ import { gameJams, games, home, notFound, others, projects } from './assets/cons
 import classNames from 'classnames'
 import useIsMobile from './hooks/useIsMobile'
 import Footer from './components/Footer'
-import DigitalRain from './components/DigitalRain'
 
 function App(): ReactElement {
   const isMobile = useIsMobile()
@@ -19,11 +18,6 @@ function App(): ReactElement {
 
   return (
     <div>
-      <div className={'background'}>
-        {!isMobile &&
-          <DigitalRain />
-        }
-      </div>
       <div className={classNames('foreground', { ['mobile']: isMobile })}>
         <BrowserRouter basename='/'>
           <Header selectedFilter={selectedFilter} onTabChange={onTabChange} />

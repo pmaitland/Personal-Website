@@ -35,19 +35,19 @@
 select {
   height: fit-content;
   background-color: $black;
-  font-family: 'Good Old DOS';
-  font-size: $body-font-size;
+  font-family: 'monogram';
+  font-size: $subtitle-font-size;
   border: solid 1px;
   border-color: inherit;
   cursor: pointer;
 }
 
 option {
-  font-family: 'Good Old DOS';
+  font-family: 'monogram';
 }
 
 input {
-  font-family: 'Good Old DOS';
+  font-family: 'monogram';
   background-color: rgba($black, 0);
   border: none;
   outline: none;
