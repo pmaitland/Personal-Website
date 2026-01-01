@@ -9,7 +9,7 @@ function Footer(): ReactElement {
   return (
     <div className={classNames('footer', { ['mobile']: isMobile })}>
       <div className='copyright'>
-        &copy; 2023-2025 pmaitland
+        &copy; 2023-2026 pmaitland
       </div>
     </div>
   )
