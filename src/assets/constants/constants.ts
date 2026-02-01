@@ -38,6 +38,19 @@ export const gameJams: CardList = {
   ],
   cards: [
     {
+        title: 'Many Ants Seek Kiwi',
+        body: 'The ant horde seeks your delicious kiwi. Use cinnamon and bug spray to keep them at bay.',
+        subtitles: [
+            'Global Game Jam', 'Jan 2026', 'Mask', 'Godot'
+        ],
+        links: {
+            'github': 'https://github.com/pmaitland/GGJ2026',
+            'itch.io': 'https://spooonlegs.itch.io/many-ants-seek-kiwi',
+            'ggj': 'https://globalgamejam.org/games/2026/many-ants-seek-kiwi-4'
+        },
+        image: 'mask.png'
+    },
+    {
         title: 'Rubber Duck Bubble Party',
         body: 'Join the rubber ducks in their exciting bubble party! Split into teams and push the bubbles around in multiple fun gamemodes!',
         subtitles: [
