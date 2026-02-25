@@ -52,9 +52,6 @@ function Cards({
 
   return (
     <div className={classNames('cards', colour)}>
-      {cardList.description &&
-        <p className={'description'}>{cardList.description}</p>
-      }
       <div className={classNames('options', { ['mobile']: isMobile })}>
         {showCount &&
           <p className={classNames('count', colour)}>
