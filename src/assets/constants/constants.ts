@@ -7,7 +7,7 @@ export const home: CardList = {
       body: 'Welcome to my website. Check out some of the things I\'ve done by having a look around or visiting one of the links below.',
       links: {
         'github': 'https://github.com/pmaitland',
-        'linkedin': 'https://www.linkedin.com/in/pmaitland/'
+        'itch.io': 'https://spooonlegs.itch.io/'
       },
       image: 'website.png'
     }
@@ -15,8 +15,18 @@ export const home: CardList = {
 }
 
 export const games: CardList = {
-  description: 'Making video games is great and I would like to create more, but very few of those that I start working on ever reach an enjoyably playable state! Here are the ones that somehow did.',
   cards: [
+    {
+      title: 'Labyrinth',
+      body: 'Navigate the treacherous depths of the ever-changing Labyrinth.',
+      subtitles: [
+        'Nov 2025 - Present', 'Godot'
+      ],
+      links: {
+        'itch.io': 'https://spooonlegs.itch.io/labyrinth'
+      },
+      image: 'labyrinth.png'
+    },
     {
       title: 'Push Puzzle',
       body: 'Simple push-block puzzle game. Designed so that all assets (including sprites, audio, and levels themselves) can be customised without reprogramming. This was to allow artists and designers to build and reskin the game without any programming knowledge.',
@@ -32,7 +42,6 @@ export const games: CardList = {
 }
 
 export const gameJams: CardList = {
-  description: 'I really enjoy taking part in game jams and am pleased to say I\'ve been able to attend many. These are all of the games I\'ve been a part of making at them. Try some of them out!',
   filters: [
     'GitHub Game Off', 'Global Game Jam', 'GUDEV'
   ],
@@ -202,7 +211,6 @@ export const gameJams: CardList = {
 }
 
 export const projects: CardList = {
-  description: 'These are other non-game related things I\'ve done. I\'ve worked on more, so this list is not exhaustive, but not everything is worth showing off :)',
   cards: [
     {
       title: 'Personal Website',
@@ -218,7 +226,7 @@ export const projects: CardList = {
     {
       title: 'Sonic',
       subtitles: [
-        'Aug 2023 - Present', 'Python'
+        'Aug 2023 - Jun 2025', 'Python'
       ],
       body: 'Discord bot used with friends to announce Parkrun finishes and review stats and progress.',
       links: {
@@ -254,11 +262,10 @@ export const projects: CardList = {
 }
 
 export const others: CardList = {
-  description: 'Check out these other people and what they\'re up to too!',
   cards: [
     {
       title: 'Duck Sauce Games',
-      body: 'Game jams are great. I always enjoy taking part in them and now my friends and I run our own. Check out our website and come along to the next event!',
+      body: 'Game jams are great. I always enjoy taking part in them and you should too. Check out DSG and come along to one of ours!',
       links: {
         'website': 'https://ducksauce.games',
       },
