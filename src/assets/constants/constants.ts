@@ -22,10 +22,18 @@ export const games: CardList = {
       subtitles: [
         'Nov 2025 - Present', 'Godot'
       ],
-      links: {
-        'itch.io': 'https://spooonlegs.itch.io/labyrinth'
-      },
       image: 'labyrinth.png'
+    },
+    {
+      title: 'Catch of the Day',
+      body: 'Spend the day enjoying your favourite pastime.',
+      subtitles: [
+        'Mar 2026', 'Godot'
+      ],
+      links: {
+        'itch.io': 'https://spooonlegs.itch.io/catch-of-the-day'
+      },
+      image: 'catchoftheday.png'
     },
     {
       title: 'Push Puzzle',
