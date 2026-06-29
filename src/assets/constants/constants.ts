@@ -51,9 +51,20 @@ export const games: CardList = {
 
 export const gameJams: CardList = {
   filters: [
-    'GitHub Game Off', 'Global Game Jam', 'GUDEV'
+    'Juniper Dev Game Jam', 'GitHub Game Off', 'Global Game Jam', 'GUDEV'
   ],
   cards: [
+    {
+        title: 'cirycle',
+        body: 'circles and cycles and circles and cycles and circles and cycles and circles and cycles and',
+        subtitles: [
+            'Juniper Dev Game Jam', 'Jun 2026', 'Spin to Win', 'Godot'
+        ],
+        links: {
+            'itch.io': 'https://spooonlegs.itch.io/cirycle'
+        },
+        'image': 'cirycle.png'
+    },
     {
         title: 'Many Ants Seek Kiwi',
         body: 'The ant horde seeks your delicious kiwi. Use cinnamon and bug spray to keep them at bay.',
