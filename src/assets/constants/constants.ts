@@ -17,12 +17,15 @@ export const home: CardList = {
 export const games: CardList = {
   cards: [
     {
-      title: 'Labyrinth',
-      body: 'Navigate the treacherous depths of the ever-changing Labyrinth.',
+      title: 'Location: Earth',
+      body: 'Search the globe to locate your targets.',
       subtitles: [
-        'Nov 2025 - Present', 'Godot'
+        'May 2026 - Oct 2026', 'Godot'
       ],
-      image: 'labyrinth.png'
+      links: {
+        'itch.io': 'https://spooonlegs.itch.io/location-earth'
+      },
+      image: 'locationEarth.png'
     },
     {
       title: 'Catch of the Day',
@@ -55,41 +58,41 @@ export const gameJams: CardList = {
   ],
   cards: [
     {
-        title: 'cirycle',
-        body: 'circles and cycles and circles and cycles and circles and cycles and circles and cycles and',
-        subtitles: [
-            'Juniper Dev Game Jam', 'Jun 2026', 'Spin to Win', 'Godot'
-        ],
-        links: {
-            'itch.io': 'https://spooonlegs.itch.io/cirycle'
-        },
-        'image': 'cirycle.png'
+      title: 'cirycle',
+      body: 'circles and cycles and circles and cycles and circles and cycles and circles and cycles and',
+      subtitles: [
+        'Juniper Dev Game Jam', 'Jun 2026', 'Spin to Win', 'Godot'
+      ],
+      links: {
+        'itch.io': 'https://spooonlegs.itch.io/cirycle'
+      },
+      'image': 'cirycle.png'
     },
     {
-        title: 'Many Ants Seek Kiwi',
-        body: 'The ant horde seeks your delicious kiwi. Use cinnamon and bug spray to keep them at bay.',
-        subtitles: [
-            'Global Game Jam', 'Jan 2026', 'Mask', 'Godot'
-        ],
-        links: {
-            'github': 'https://github.com/pmaitland/GGJ2026',
-            'itch.io': 'https://spooonlegs.itch.io/many-ants-seek-kiwi',
-            'ggj': 'https://globalgamejam.org/games/2026/many-ants-seek-kiwi-4'
-        },
-        image: 'mask.png'
+      title: 'Many Ants Seek Kiwi',
+      body: 'The ant horde seeks your delicious kiwi. Use cinnamon and bug spray to keep them at bay.',
+      subtitles: [
+        'Global Game Jam', 'Jan 2026', 'Mask', 'Godot'
+      ],
+      links: {
+        'github': 'https://github.com/pmaitland/GGJ2026',
+        'itch.io': 'https://spooonlegs.itch.io/many-ants-seek-kiwi',
+        'ggj': 'https://globalgamejam.org/games/2026/many-ants-seek-kiwi-4'
+      },
+      image: 'mask.png'
     },
     {
-        title: 'Rubber Duck Bubble Party',
-        body: 'Join the rubber ducks in their exciting bubble party! Split into teams and push the bubbles around in multiple fun gamemodes!',
-        subtitles: [
-          'Global Game Jam', 'Jan 2025', 'Bubble', 'Godot'
-        ],
-        links: {
-          'github': 'https://github.com/pmaitland/GGJ2025',
-          'itch.io': 'https://spooonlegs.itch.io/rubber-duck-bubble-party',
-          'ggj': 'https://globalgamejam.org/games/2025/project-bubball-6'
-        },
-        image: 'rubberDuckBubbleParty.png'
+      title: 'Rubber Duck Bubble Party',
+      body: 'Join the rubber ducks in their exciting bubble party! Split into teams and push the bubbles around in multiple fun gamemodes!',
+      subtitles: [
+        'Global Game Jam', 'Jan 2025', 'Bubble', 'Godot'
+      ],
+      links: {
+        'github': 'https://github.com/pmaitland/GGJ2025',
+        'itch.io': 'https://spooonlegs.itch.io/rubber-duck-bubble-party',
+        'ggj': 'https://globalgamejam.org/games/2025/project-bubball-6'
+      },
+      image: 'rubberDuckBubbleParty.png'
     },
     {
       title: 'Downhill Soapbox Champion',
